@@ -3,10 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Add stylesheet -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Add TailwindCss CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- daisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BD Emergency Hotline</title>
   </head>
   <body>
+    <section>
+      <nav class="flex flex-row justify-between mx-[60px] my-5">
+        <div class="flex flex-row justify-center items-center p-2.5 w-[220px] h-[60px]">
+          <img class="w-[55px] h-[55px]" src="./assets/logo.png" alt="Bangladesh emergency hotline logo">
+          <h1 class="p-2.5 font-extrabold text-[#006747] text-2xl inter-font">
+            Emergency Service
+          </h1>
+        </div>
+        <div>
+          <ul class="flex flex-row gap-2.5">
+            <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-lg list-none">
+              <span>0</span>
+              <i class="text-red-700 fa-solid fa-heart"></i>
+            </li>
+            <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-lg list-none">
+              <span>0</span>
+              <i class="text-orange-700 fa-brands fa-bitcoin"></i>
+            </li>
+            <li class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
+              <span>100</span>
+              <p class="outfit-font">Copy</p>
+            </li>
+          </ul>
+        </div>
+        </ul>
+      </nav>
+    </section>
     <script src="index.js"></script>
   </body>
 </html>
+
+
+
+

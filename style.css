@@ -1,0 +1,16 @@
+/* import inter google font  */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+/* import outfit google font  */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* Import tailwindcss cdn */
+@import "tailwindcss";
+
+@layer components {
+  .inter-font {
+    font-family: "Inter", "sans-serif";
+  }
+  .outfit-font {
+    font-family: "Inter", "sans-serif";
+  }
+}
