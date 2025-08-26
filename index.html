@@ -18,40 +18,96 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>BD Emergency Hotline</title>
   </head>
-  <body>
-    <section>
-      <nav class="flex flex-row justify-between mx-[60px] my-5">
-        <div class="flex flex-row justify-center items-center p-2.5 w-[220px] h-[60px]">
-          <img class="w-[60px] h-[60px]" src="./assets/logo.png" alt="Bangladesh emergency hotline logo">
-          <h1 class="p-2.5 font-black text-[#006747] text-2xl open-font">
-            Emergency Service
-          </h1>
-        </div>
-        <div>
-          <ul class="flex flex-row gap-2.5">
-            <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
-              <span>0</span>
-              <i class="text-red-700 fa-solid fa-heart"></i>
-            </li>
-            <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
-              <span>0</span>
-              <i class="text-orange-700 fa-brands fa-bitcoin"></i>
-            </li>
-            <li class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
-              <span>100</span>
-              <p class="outfit-font">Copy</p>
-            </li>
+  <body class="bg-green-50">
+    <header class="bg-white p-[5px]">
+      <section>
+        <nav class="flex flex-row justify-between mx-[60px] my-5">
+          <div class="flex flex-row justify-center items-center p-2.5 w-[220px] h-[60px]">
+            <img class="w-[60px] h-[60px]" src="./assets/logo.png" alt="Bangladesh emergency hotline logo">
+            <h1 class="p-2.5 font-black text-[#006747] text-2xl open-font">
+              Emergency Service
+            </h1>
+          </div>
+          <div>
+            <ul class="flex flex-row gap-2.5">
+              <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
+                <span>0</span>
+                <i class="text-red-700 fa-solid fa-heart"></i>
+              </li>
+              <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
+                <span>0</span>
+                <i class="text-orange-700 fa-brands fa-bitcoin"></i>
+              </li>
+              <li class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
+                <span>100</span>
+                <p class="outfit-font">Copy</p>
+              </li>
+            </ul>
+          </div>
           </ul>
-        </div>
-        </ul>
-      </nav>
+        </nav>
+      </section>
+    </header>
+    <section class="flex flex-col justify-center items-center bg-gradient-to-r from-green-950 via-green-800 to-green-950 p-[30px]">
+      <div class="flex flex-col justify-center items-center gap-2.5 p-[1%]">
+        <img class="block w-[92px] h-[92px]" src="./assets/logo.png" alt="BD Emergency logo">
+        <h1 class="font-semibold text-white text-4xl text-center hind-font">জরুরি সেবা ডিরেক্টরি</h1>
+        <p class="font-semibold text-white text-lg text-center">
+          Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh
+        </p>
+      </div>
     </section>
-    <section class="flex flex-col justify-center items-center bg-gradient-to-r from-green-950 via-green-800 to-green-950 h-60">
-<div class="flex flex-col justify-center items-center gap-2.5 w-[95%]">
-  <img class="block w-[92px] h-[92px]" src="./assets/logo.png" alt="">
-  <h1 class="font-semibold text-white text-4xl text-center hind-font">জরুরি সেবা ডিরেক্টরি</h1>
-  <p class="font-semibold text-white text-lg text-center">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
-</div>
+
+    <section class="place-items-center grid p-12">
+      <div class="gap-[30px] grid grid-cols-4">
+        <div class="bg-white p-8 rounded-lg w-[435px] h-[360px]">
+          <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
+            <img  class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="emergency icon">
+          </div>
+            <h1 class="mb-[2px] font-bold text-black text-2xl hind-font">জাতীয় জরুরি সেবা</h1>
+            <p class="mb-6 font-semibold text-gray-500 text-md">National Emergency</p>
+            <p class="font-black text-black text-3xl">999</p>
+            <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সার্বজনীন</p>
+            <div class="flex flex-row gap-2">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+                <i class="mr-1 fa-regular fa-copy"></i>
+                <span>Copy</span>
+              </button>
+              <button class="content-center bg-green-600 hover:bg-green-700 rounded-md w-full h-10 text-white text-center hover:cursor-pointer">
+                <i class="mr-1 fa-solid fa-phone"></i>
+                <span>Call</span>
+              </button>
+            </div>
+        </div>
+        <!-- <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="bg-white p-8 w-[435px] h-[360px]">
+
+        </div>
+        <div class="col-start-4 col-end-5 row-start-1 row-end-4 bg-white p-8 w-[400px]">
+history
+        </div> -->
+      </div>
+     
     </section>
     <script src="index.js"></script>
   </body>
