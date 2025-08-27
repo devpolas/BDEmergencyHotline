@@ -149,8 +149,8 @@ function rechargeBalance() {
   rechargeBtn.classList.remove("hidden");
 
   // change the modal heading text
-  document.getElementById("custom-sure-text").innerText =
-    "Your Balance is too low!";
+  const customHeading = document.getElementById("custom-sure-text");
+  customHeading.innerText = "Your Balance is too low!";
 
   // hide main paragraph form modal
   const waringText = document.getElementById("custom-text");
@@ -166,6 +166,7 @@ function rechargeBalance() {
     rechargeBtn.classList.add("hidden");
     lowBalanceText.classList.add("hidden");
     waringText.classList.remove("hidden");
+    customHeading.innerText = "Are You Sure?";
   });
   modalId.showModal();
 }
