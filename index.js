@@ -6,6 +6,8 @@ function updateValue(count, id) {
     if (Number(elementValue) === 0 || Number(elementValue) > 0) {
       element.innerText = Number(elementValue) + 1;
       return;
+    } else {
+      return;
     }
   }
   if (count === "dec") {
@@ -13,6 +15,18 @@ function updateValue(count, id) {
     const elementValue = element.innerText;
     if (Number(elementValue) === 0 || Number(elementValue) > 0) {
       element.innerText = Number(elementValue) - 1;
+      return;
+    } else {
+      return;
+    }
+  }
+  if (count === "call") {
+    const element = document.getElementById(id);
+    const elementValue = element.innerText;
+    if (Number(elementValue) >= 20) {
+      element.innerText = Number(elementValue) - 20;
+      return;
+    } else {
       return;
     }
   }
@@ -33,7 +47,7 @@ for (const heart of allHeart) {
 }
 
 // Handel all copy button
-const allCopyBtn = document.querySelectorAll(".copytext");
+const allCopyBtn = document.querySelectorAll(".copy-text");
 for (const copyBtn of allCopyBtn) {
   copyBtn.addEventListener("click", function () {
     const copyId = copyBtn.id.split("-")[0];
@@ -56,3 +70,43 @@ for (const copyBtn of allCopyBtn) {
     }, 3000);
   });
 }
+
+// handel all call button
+const allCallBtn = document.querySelectorAll(".call");
+for (const callBtn of allCallBtn) {
+  callBtn.addEventListener("click", function () {
+    const callingToMinistry = document.getElementById("calling-ministry");
+    const sureToCall = document.getElementById("sureCalling");
+    const callingMinistryNumber = document.getElementById(
+      "calling-ministry-number"
+    );
+    // get the call number form callBtn
+    const callId = callBtn.id.split("-")[0];
+    const id = `${callId}-number`;
+    const callNumber = document.getElementById(id).innerText;
+    // get the call destination form document
+    const callDestination = document.getElementById(callId).innerText;
+    callingToMinistry.innerText = callDestination;
+    sureToCall.innerText = callDestination;
+    callingMinistryNumber.innerText = callNumber;
+    // show a dialog
+    const modalId = document.getElementById("modal");
+    modalId.showModal();
+  });
+}
+// when hit the modal call btn
+const callSuccess = document.getElementById("call-success");
+callSuccess.addEventListener("click", function () {
+  afterCalling();
+});
+
+// after success to call
+function afterCalling() {
+  const balance = document.getElementById("coin").innerText;
+  if (Number(balance) >= 20) {
+    updateValue("call", "coin");
+    return;
+  }
+}
+
+// history update
