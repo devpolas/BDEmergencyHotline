@@ -89,15 +89,20 @@ for (const callBtn of allCallBtn) {
     callingToMinistry.innerText = callDestination;
     sureToCall.innerText = callDestination;
     callingMinistryNumber.innerText = callNumber;
+    // call function for access info outside
+    historyUpdate(callDestination, callNumber);
     // show a dialog
     const modalId = document.getElementById("modal");
     modalId.showModal();
   });
 }
+
 // when hit the modal call btn
 const callSuccess = document.getElementById("call-success");
 callSuccess.addEventListener("click", function () {
   afterCalling();
+
+  // for history
 });
 
 // after success to call
@@ -110,3 +115,45 @@ function afterCalling() {
 }
 
 // history update
+function historyUpdate(callDestination, callNumber) {
+  const callHistory = document.getElementById("history-content");
+  const historyParentDiv = document.createElement("div");
+  historyParentDiv.classList.add("historyParent");
+
+  const div1 = document.createElement("div");
+  div1.classList.add("history-content");
+  const paragraph1 = document.createElement("p");
+  paragraph1.innerText = callDestination;
+
+  div1.appendChild(paragraph1);
+
+  const paragraph2 = document.createElement("p");
+  paragraph2.innerText = callNumber;
+
+  div1.appendChild(paragraph2);
+
+  historyParentDiv.appendChild(div1);
+
+  const newDate = new Date().toLocaleDateString("en-us", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const newTime = new Date().toLocaleTimeString("en-us");
+  const div2 = document.createElement("div");
+  div2.classList.add("datetime");
+  const time1 = document.createElement("p");
+  time1.innerText = newTime;
+  div2.appendChild(time1);
+  const date1 = document.createElement("p");
+  date1.innerText = newDate;
+  div2.appendChild(date1);
+  historyParentDiv.appendChild(div2);
+
+  callHistory.appendChild(historyParentDiv);
+}
+
+// clear the history
+document.getElementById("clear-history").addEventListener("click", function () {
+  document.getElementById("history-content").innerHTML = null;
+});

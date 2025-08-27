@@ -24,3 +24,29 @@
     font-family: "Hind Madurai", sans-serif;
   }
 }
+
+.historyParent {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  background-color: rgba(0, 0, 0, 0.03);
+  margin-bottom: 8px;
+  padding: 10px 24px;
+  height: 85px;
+  width: 352px;
+  border-radius: 10px;
+}
+.datetime {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.history-content {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 18px;
+}
