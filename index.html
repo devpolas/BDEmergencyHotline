@@ -36,11 +36,18 @@
                 </li>
                 <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
                   <span id="coin">100</span>
-                  <i class="text-orange-700 fa-brands fa-bitcoin"></i>
+                  <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="coin picture">
                 </li>
                 <li class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
                   <span id="copy">0</span>
                   <p class="outfit-font">Copy</p>
+                </li>
+                <li class="flex flex-row justify-center items-center gap-1 ml-2 h-[55px] font-bold text-xl list-none"> 
+                  <i class="text-sm fa-solid fa-language"></i>               
+                  <select title="language" name="language" id="language" class="select-error select-sm select">
+                    <option class="text-sm" value="bengali" >Bengali</option>
+                    <option class="text-sm" value="english">English</option>
+                  </select>
                 </li>
               </ul>
             </div>
@@ -52,7 +59,7 @@
       <section class="flex flex-col justify-center items-center bg-gradient-to-r from-green-950 via-green-800 to-green-950">
         <div class="flex flex-col justify-center items-center gap-2.5 px-[2%] py-5">
           <img class="block w-[92px] h-[92px]" src="./assets/logo.png" alt="BD Emergency logo">
-          <h1 id="national" class="font-semibold text-[40px] text-white text-center hind-font">জরুরি সেবা ডিরেক্টরি</h1>
+          <h1 id="hero-national" class="font-semibold text-[40px] text-white text-center hind-font">জরুরি সেবা ডিরেক্টরি</h1>
           <p class="font-semibold text-white text-xl text-center">
             Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh
           </p>
@@ -65,10 +72,10 @@
             <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
               <img  class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="emergency icon">
             </div>
-              <h1 class="mb-[2px] font-bold text-black text-2xl hind-font">জাতীয় জরুরি সেবা</h1>
+              <h1 id="national" class="mb-[2px] font-bold text-black text-2xl hind-font">জাতীয় জরুরি সেবা</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">National Emergency</p>
               <p id="national-number" class="font-black text-black text-3xl">999</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সার্বজনীন</p>
+              <p id="national-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সার্বজনীন</p>
               <div class="flex flex-row gap-2">
                 <button id="national-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -88,7 +95,7 @@
               <h1 id="police" class="mb-[2px] font-bold text-black text-2xl hind-font">পুলিশ</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Police</p>
               <p id="police-number" class="font-black text-black text-3xl">999</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">পুলিশ</p>
+              <p id="police-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">পুলিশ</p>
               <div class="flex flex-row gap-2">
                 <button id="police-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -108,7 +115,7 @@
               <h1 id="fire" class="mb-[2px] font-bold text-black text-2xl hind-font">ফায়ার সার্ভিস</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Fire Service</p>
               <p id="fire-number" class="font-black text-black text-3xl">999</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">ফায়ার</p>
+              <p id="fire-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">ফায়ার</p>
               <div class="flex flex-row gap-2">
                 <button id="fire-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -128,7 +135,7 @@
               <h1 id="ambulance" class="mb-[2px] font-bold text-black text-2xl hind-font">অ্যাম্বুলেন্স</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Ambulance</p>
               <p id="ambulance-number" class="font-black text-black text-3xl">1994-999999</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">স্বাস্থ্য</p>
+              <p id="ambulance-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">স্বাস্থ্য</p>
               <div class="flex flex-row gap-2">
                 <button id="ambulance-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -143,18 +150,18 @@
           <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
             <i id="womenChildHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
             <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
-              <img  class="w-[32px] h-[32px]" src="./assets/wonem-child.png" alt="emergency icon">
+              <img  class="w-[32px] h-[32px]" src="./assets/wonem-child.png" alt="womanChild icon">
             </div>
-              <h1 id="wonamChild" class="mb-[2px] font-bold text-black text-2xl hind-font">নারী ও শিশু সহায়তা</h1>
+              <h1 id="wcCare" class="mb-[2px] font-bold text-black text-2xl hind-font">নারী ও শিশু সহায়তা</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Women & Child Helpline</p>
-              <p id="wonamChild-number" class="font-black text-black text-3xl">109</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সহায়তা</p>
+              <p id="wcCare-number" class="font-black text-black text-3xl">109</p>
+              <p id="wcCare-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সহায়তা</p>
               <div class="flex flex-row gap-2">
-                <button id="wonamChild-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
+                <button id="wcCare-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
                   <span>Copy</span>
                 </button>
-                <button id="wonamChild-call" class="content-center bg-green-600 hover:bg-green-700 rounded-md w-full h-10 text-white text-center hover:cursor-pointer call">
+                <button id="wcCare-call" class="content-center bg-green-600 hover:bg-green-700 rounded-md w-full h-10 text-white text-center hover:cursor-pointer call">
                   <i class="mr-1 fa-solid fa-phone"></i>
                   <span>Call</span>
                 </button>
@@ -168,7 +175,7 @@
               <h1 id="dudok" class="mb-[2px] font-bold text-black text-2xl hind-font">দুদক</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Anti-Corruption</p>
               <p id="dudok-number" class="font-black text-black text-3xl">106</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সরকারি</p>
+              <p id="dudok-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সরকারি</p>
               <div class="flex flex-row gap-2">
                 <button id="dudok-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -188,7 +195,7 @@
               <h1 id="electricity" class="mb-[2px] font-bold text-black text-2xl hind-font">বিদ্যুৎ বিভ্রাট</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Electricity Outage</p>
               <p id="electricity-number" class="font-black text-black text-3xl">16216</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">বিদ্যুৎ</p>
+              <p id="electricity-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">বিদ্যুৎ</p>
               <div class="flex flex-row gap-2">
                 <button id="electricity-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -208,7 +215,7 @@
               <h1 id="brac" class="mb-[2px] font-bold text-black text-2xl hind-font">ব্র্যাক ব্যাংক</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Brac Bank</p>
               <p id="brac-number" class="font-black text-black text-3xl">16445</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">এনজিও</p>
+              <p id="brac-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">এনজিও</p>
               <div class="flex flex-row gap-2">
                 <button id="brac-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>
@@ -228,7 +235,7 @@
               <h1 id="railway" class="mb-[2px] font-bold text-black text-2xl hind-font">বাংলাদেশ রেলওয়ে</h1>
               <p class="mb-6 font-semibold text-gray-500 text-md">Bangladesh Railway</p>
               <p id="railway-number" class="font-black text-black text-3xl">163</p>
-              <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">পরিবহন</p>
+              <p id="railway-category" class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">পরিবহন</p>
               <div class="flex flex-row gap-2">
                 <button id="railway-copy" class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copy-text">
                   <i class="mr-1 fa-regular fa-copy"></i>

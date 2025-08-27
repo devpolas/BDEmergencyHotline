@@ -213,3 +213,119 @@ function historyUpdate(callDestination, callNumber) {
 document.getElementById("clear-history").addEventListener("click", function () {
   document.getElementById("history-content").innerHTML = null;
 });
+
+// custom language
+const languages = {
+  heroEn: {
+    title: "Emergency Service Directory",
+    serviceTitle: {
+      national: "National Emergency Number",
+      police: "Police Helpline Number",
+      fire: "Fire Service Number",
+      ambulance: "Ambulance Service",
+      wcCare: "Women & Child Helpline",
+      dudok: "Anti-Corruption Helpline",
+      electricity: "Electricity Helpline",
+      brac: "Brac Helpline",
+      railway: "Bangladesh Railway Helpline ",
+    },
+    category: {
+      national: "All",
+      police: "Police",
+      fire: "Fire",
+      ambulance: "Health",
+      wcCare: "Help",
+      dudok: "Govt.",
+      electricity: "Electricity",
+      brac: "NGO",
+      railway: "Travel",
+    },
+  },
+  heroBn: {
+    title: "জরুরি সেবা ডিরেক্টরি",
+    serviceTitle: {
+      national: "জাতীয় জরুরি সেবা",
+      police: "পুলিশ",
+      fire: "ফায়ার সার্ভিস",
+      ambulance: "অ্যাম্বুলেন্স",
+      wcCare: "নারী ও শিশু সহায়তা",
+      dudok: "দুদক",
+      electricity: "বিদ্যুৎ বিভ্রাট",
+      brac: "ব্র্যাক",
+      railway: "বাংলাদেশ রেলওয়ে",
+    },
+    category: {
+      national: "সার্বজনীন",
+      police: "পুলিশ",
+      fire: "ফায়ার",
+      ambulance: "স্বাস্থ্য",
+      wcCare: "সহায়তা",
+      dudok: "সরকারি",
+      electricity: "বিদ্যুৎ",
+      brac: "এনজিও",
+      railway: "পরিবহন",
+    },
+  },
+};
+
+const selectedItem = document.getElementById("language");
+selectedItem.addEventListener("change", function () {
+  const value = selectedItem.value;
+
+  // You can call other functions or update the UI here
+  changeLanguage(value);
+});
+
+function updateLanguage(id, value) {
+  const element = document.getElementById(id);
+  element.innerText = value;
+  return;
+}
+
+const serviceAllTitle = [
+  "national",
+  "police",
+  "fire",
+  "ambulance",
+  "wcCare",
+  "dudok",
+  "electricity",
+  "brac",
+  "railway",
+];
+const serviceAllTitleCategory = [
+  "national-category",
+  "police-category",
+  "fire-category",
+  "ambulance-category",
+  "wcCare-category",
+  "dudok-category",
+  "electricity-category",
+  "brac-category",
+  "railway-category",
+];
+
+function changeLanguage(language) {
+  if (language === "bengali") {
+    updateLanguage("hero-national", languages.heroBn.title);
+    for (const title of serviceAllTitle) {
+      updateLanguage(title, languages.heroBn.serviceTitle[title]);
+    }
+    for (const title of serviceAllTitleCategory) {
+      const newTitle = title.split("-")[0];
+      updateLanguage(title, languages.heroBn.category[newTitle]);
+    }
+    return;
+  }
+  if (language === "english") {
+    updateLanguage("hero-national", languages.heroEn.title);
+    for (const title of serviceAllTitle) {
+      updateLanguage(title, languages.heroEn.serviceTitle[title]);
+    }
+    for (const title of serviceAllTitleCategory) {
+      const newTitle = title.split("-")[0];
+      updateLanguage(title, languages.heroEn.category[newTitle]);
+    }
+    return;
+  }
+}
