@@ -21,27 +21,34 @@
   <body class="bg-green-50">
       <header class="bg-white">
         <section>
-          <nav class="flex flex-row justify-between px-[60px] py-5">
+          <nav class="flex flex-row justify-between px-[30px] md:px-[60px] py-2 md:py-5">
             <div class="flex flex-row justify-center items-center p-2.5 w-[220px] h-[60px]">
-              <img class="w-[60px] h-[60px]" src="./assets/logo.png" alt="Bangladesh emergency hotline logo">
-              <h1 class="p-2.5 font-black text-[#006747] text-2xl open-font">
+              <img class="w-[40px] md:w-[60px] h-[40px] md:h-[60px]" src="./assets/logo.png" alt="Bangladesh emergency hotline logo">
+              <h1 class="p-2.5 font-black text-[#006747] text-lg md:text-2xl open-font">
                 Emergency Service
               </h1>
             </div>
             <div id="nav-section">
-              <ul class="flex flex-row gap-2.5">
-                <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
-                  <span id="love">0</span>
-                  <i class="text-red-700 fa-solid fa-heart"></i>
+              <ul class="flex flex-row gap-1.5 md:gap-2 lg:gap-2.5">
+                <li class="hidden md:block lg:block">
+                    <div class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[90px] md:w-[95px] lg:w-[130px] h-[55px] font-bold text-xl list-none">
+                    <span id="love">0</span>
+                    <i class="text-red-700 fa-solid fa-heart"></i>
+                  </div>
                 </li>
-                <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
+               <li>
+                <div class="flex flex-row justify-center items-center gap-1.5 md:gap-2 lg:gap-2.5 bg-green-100 rounded-4xl w-[90px] md:w-[95px] lg:w-[130px] h-[55px] md:h-[55px] lg:h-[55px] font-bold text-xl md:text-xl lg:text-xl list-none">
                   <span id="coin">100</span>
-                  <img class="w-[24px] h-[24px]" src="./assets/coin.png" alt="coin picture">
+                  <img class="w-[20px] md:w-[24px] h-[20px] md:h-[24px]" src="./assets/coin.png" alt="coin picture">
+                </div>
+               </li>
+                <li class="hidden md:hidden lg:block">
+                  <div class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
+                    <span id="copy">0</span>
+                    <p class="outfit-font">Copy</p>
+                  </div>
                 </li>
-                <li class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
-                  <span id="copy">0</span>
-                  <p class="outfit-font">Copy</p>
-                </li>
+                
                 <li class="flex flex-row justify-center items-center gap-1 ml-2 h-[55px] font-bold text-xl list-none"> 
                   <i class="text-sm fa-solid fa-language"></i>               
                   <select title="language" name="language" id="language" class="select-error select-sm select">
@@ -58,15 +65,15 @@
       <main>
       <section class="flex flex-col justify-center items-center bg-gradient-to-r from-green-950 via-green-800 to-green-950">
         <div class="flex flex-col justify-center items-center gap-2.5 px-[2%] py-5">
-          <img class="block w-[92px] h-[92px]" src="./assets/logo.png" alt="BD Emergency logo">
+          <img class="block w-[75px] md:w-[92px] h-[75px] md:h-[92px]" src="./assets/logo.png" alt="BD Emergency logo">
           <h1 id="hero-national" class="font-semibold text-[40px] text-white text-center hind-font">জরুরি সেবা ডিরেক্টরি</h1>
           <p class="font-semibold text-white text-xl text-center">
             Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh
           </p>
         </div>
       </section>
-      <section class="place-items-center grid p-12">
-        <div class="gap-[30px] grid grid-cols-4">
+      <section class="place-items-center grid p-2 md:p-4 lg:p-12">
+        <div class="gap-[30px] grid grid-cols-1 lg:grid-cols-4">
           <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
             <i id="nationalHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
             <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
@@ -107,7 +114,7 @@
                 </button>
               </div>
           </div>
-          <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
+          <div class="relative bg-white p-8 rounded-lg w-[400px] md:w-[435px] lg:w-[435px] h-[330px] md:h-[360px] lg:h-[360px]">
             <i id="fireHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
             <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
               <img  class="w-[32px] h-[32px]" src="./assets/fire-service.png" alt="fire-service icon">
@@ -247,7 +254,7 @@
                 </button>
               </div>
           </div>
-          <div class="col-start-4 col-end-5 row-start-1 row-end-4 bg-white p-4 w-[400px] h-[1140px] overflow-y-auto">
+          <div class="hidden md:block lg:block md:col-start-4 md:col-end-5 md:row-start-1 md:row-end-4 bg-white p-4 w-[400px] lg:h-[1140px] overflow-y-auto">
             <div class="flex flex-row justify-between items-center mb-4 w-[352px] h-[52px]">
               <p class="text-lg text-center">
                 <i class="mr-2 fa-clock-rotate-left fa-solid"></i>
