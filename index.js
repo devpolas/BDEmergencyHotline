@@ -27,8 +27,15 @@ function updateValue(count, id) {
       element.innerText = Number(elementValue) - 20;
       return;
     } else {
-      return;
+      return 0;
     }
+  }
+
+  if (count === "recharge") {
+    const element = document.getElementById(id);
+    const elementValue = element.innerText;
+    element.innerText = 100;
+    return;
   }
 }
 
@@ -71,10 +78,21 @@ for (const copyBtn of allCopyBtn) {
   });
 }
 
+// global variable for history
+let currentCallNumber = "";
+let currentCallDestination = "";
+
 // handel all call button
 const allCallBtn = document.querySelectorAll(".call");
 for (const callBtn of allCallBtn) {
   callBtn.addEventListener("click", function () {
+    // when balance is 0 or under 20
+    const balance = document.getElementById("coin").innerText;
+    if (Number(balance) === 0 || Number(balance) < 20) {
+      rechargeBalance();
+      return;
+    }
+    // select element form document
     const callingToMinistry = document.getElementById("calling-ministry");
     const sureToCall = document.getElementById("sureCalling");
     const callingMinistryNumber = document.getElementById(
@@ -84,13 +102,18 @@ for (const callBtn of allCallBtn) {
     const callId = callBtn.id.split("-")[0];
     const id = `${callId}-number`;
     const callNumber = document.getElementById(id).innerText;
+
     // get the call destination form document
     const callDestination = document.getElementById(callId).innerText;
+    // callNumber and callDestination set global variable
+    console.log(callNumber, callDestination);
+    currentCallNumber = callNumber;
+    currentCallDestination = callDestination;
+    // set the dom value
     callingToMinistry.innerText = callDestination;
     sureToCall.innerText = callDestination;
     callingMinistryNumber.innerText = callNumber;
-    // call function for access info outside
-    historyUpdate(callDestination, callNumber);
+
     // show a dialog
     const modalId = document.getElementById("modal");
     modalId.showModal();
@@ -100,23 +123,55 @@ for (const callBtn of allCallBtn) {
 // when hit the modal call btn
 const callSuccess = document.getElementById("call-success");
 callSuccess.addEventListener("click", function () {
+  // after calling update Balance
   afterCalling();
-
   // for history
+  historyUpdate(currentCallDestination, currentCallNumber);
 });
-
 // after success to call
 function afterCalling() {
   const balance = document.getElementById("coin").innerText;
   if (Number(balance) >= 20) {
     updateValue("call", "coin");
-    return;
   }
+}
+
+// when low balance
+function rechargeBalance() {
+  const modalId = document.getElementById("modal");
+
+  // hide the call button
+  const hideCallSuccessBtn = document.getElementById("call-success");
+  hideCallSuccessBtn.classList.add("hidden");
+
+  // visible the recharge button
+  const rechargeBtn = document.getElementById("recharge-success");
+  rechargeBtn.classList.remove("hidden");
+
+  // change the modal heading text
+  document.getElementById("custom-sure-text").innerText =
+    "Your Balance is too low!";
+
+  // hide main paragraph form modal
+  const waringText = document.getElementById("custom-text");
+  waringText.classList.add("hidden");
+  // change the modal paragraph
+  const lowBalanceText = document.getElementById("low-balance-text");
+  lowBalanceText.classList.remove("hidden");
+  // show modal
+
+  rechargeBtn.addEventListener("click", function () {
+    updateValue("recharge", "coin");
+    hideCallSuccessBtn.classList.remove("hidden");
+    rechargeBtn.classList.add("hidden");
+    lowBalanceText.classList.add("hidden");
+    waringText.classList.remove("hidden");
+  });
+  modalId.showModal();
 }
 
 // history update
 function historyUpdate(callDestination, callNumber) {
-  const callHistory = document.getElementById("history-content");
   const historyParentDiv = document.createElement("div");
   historyParentDiv.classList.add("historyParent");
 
@@ -150,6 +205,7 @@ function historyUpdate(callDestination, callNumber) {
   div2.appendChild(date1);
   historyParentDiv.appendChild(div2);
 
+  const callHistory = document.getElementById("history-content");
   callHistory.appendChild(historyParentDiv);
 }
 

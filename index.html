@@ -262,13 +262,21 @@
             You want to call the 
             <span class="font-bold text-xl" id="calling-ministry"></span>. 
             If you really want to call the <span class="font-bold text-xl" id="sureCalling"></span>, We will forward your call to <span class="font-bold text-xl" id="calling-ministry-number"></span>.</p>
+            <p id="low-balance-text" class="hidden py-4 font-normal text-gray-600 text-lg inter-font">You don't have enough balance for calling, please recharge! Hit the Recharge button to get 100 calling points.</p>
           <div class="flex flex-row justify-end gap-2.5">
-            <button id="cancel-btn" onclick="modal.close()" class="btn btn-error inter-font">Cancel</button>
-            <button id="call-success" onclick="modal.close()" class="btn btn-success inter-font">Call</button>
+            <button id="cancel-btn" onclick="modal.close()" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded font-bold text-white hover:cursor-pointer">
+              Cancel
+            </button>
+            <button id="call-success" onclick="modal.close()" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded font-bold text-white hover:cursor-pointer">
+              Call Now
+            </button>
+            <button id="recharge-success" onclick="modal.close()" class="hidden bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded font-bold text-white hover:cursor-pointer">
+              Recharge Now
+            </button>
           </div>
         </div>
         <form method="dialog" class="modal-backdrop">
-          <button>close</button>
+          <button type="submit">close</button>
         </form>
       </dialog>
 
