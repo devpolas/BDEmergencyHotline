@@ -28,18 +28,18 @@
               Emergency Service
             </h1>
           </div>
-          <div>
+          <div id="nav-section">
             <ul class="flex flex-row gap-2.5">
               <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
-                <span>0</span>
+                <span id="love">0</span>
                 <i class="text-red-700 fa-solid fa-heart"></i>
               </li>
               <li class="flex flex-row justify-center items-center gap-2.5 bg-green-100 rounded-4xl w-[130px] h-[55px] font-bold text-xl list-none">
-                <span>0</span>
+                <span id="coin">100</span>
                 <i class="text-orange-700 fa-brands fa-bitcoin"></i>
               </li>
               <li class="flex flex-row justify-center items-center gap-1.5 bg-green-600 rounded-4xl w-[130px] h-[55px] font-bold text-white text-lg list-none">
-                <span>100</span>
+                <span id="copy">0</span>
                 <p class="outfit-font">Copy</p>
               </li>
             </ul>
@@ -61,7 +61,7 @@
     <section class="place-items-center grid p-12">
       <div class="gap-[30px] grid grid-cols-4">
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="nationalHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/emergency.png" alt="emergency icon">
           </div>
@@ -70,7 +70,7 @@
             <p class="font-black text-black text-3xl">999</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সার্বজনীন</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -81,7 +81,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="policeHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/police.png" alt="police">
           </div>
@@ -90,7 +90,7 @@
             <p class="font-black text-black text-3xl">999</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">পুলিশ</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -101,7 +101,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="fireHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/fire-service.png" alt="fire-service icon">
           </div>
@@ -110,7 +110,7 @@
             <p class="font-black text-black text-3xl">999</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">ফায়ার</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -121,7 +121,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="ambulanceHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/ambulance.png" alt="ambulance icon">
           </div>
@@ -130,7 +130,7 @@
             <p class="font-black text-black text-3xl">1994-999999</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">স্বাস্থ্য</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="womenChildHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/wonem-child.png" alt="emergency icon">
           </div>
@@ -150,7 +150,7 @@
             <p class="font-black text-black text-3xl">109</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সহায়তা</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -161,7 +161,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="dudokHart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/dudok.png" alt="Anti-Corruption Commission icon">
           </div>
@@ -170,7 +170,7 @@
             <p class="font-black text-black text-3xl">106</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">সরকারি</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -181,7 +181,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="electricityHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/electricity.png" alt="Bangladesh Power Development Board icon">
           </div>
@@ -190,7 +190,7 @@
             <p class="font-black text-black text-3xl">16216</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">বিদ্যুৎ</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -201,7 +201,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="bracHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/brac.png" alt="brac icon">
           </div>
@@ -210,7 +210,7 @@
             <p class="font-black text-black text-3xl">16445</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">এনজিও</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -221,7 +221,7 @@
             </div>
         </div>
         <div class="relative bg-white p-8 rounded-lg w-[435px] h-[360px]">
-          <i class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl fa-solid fa-heart"></i>
+          <i id="railwayHeart" class="top-10 left-[350px] absolute text-gray-300 hover:text-red-600 text-2xl heart fa-solid fa-heart"></i>
           <div class="flex justify-center items-center bg-orange-100 mb-4 rounded-2xl w-[60px] h-[60px]">
             <img  class="w-[32px] h-[32px]" src="./assets/Bangladesh-Railway.png" alt="Bangladesh Railway icon">
           </div>
@@ -230,7 +230,7 @@
             <p class="font-black text-black text-3xl">163</p>
             <p class="content-center bg-gray-100 mb-6 px-4 rounded-4xl w-fit h-[37px] font-normal text-gray-500 text-lg text-center hind-font">পরিবহন</p>
             <div class="flex flex-row gap-2">
-              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer">
+              <button class="content-center hover:bg-gray-100 border-2 border-gray-100 rounded-md w-full h-10 text-center hover:cursor-pointer copytext">
                 <i class="mr-1 fa-regular fa-copy"></i>
                 <span>Copy</span>
               </button>
@@ -253,7 +253,11 @@
               <p>Call</p>
               <p>999</p>
             </div>
-            <p>12:04:12 AM</p>
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-md">12:04:12 AM</p>
+              <p class="text-sm">2025-05-15</p>
+            </div>
+            
           </div>        
         </div>
       </div>   
